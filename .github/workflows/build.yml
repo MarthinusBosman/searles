@@ -18,6 +18,12 @@ jobs:
 
       - name: Build
         run: npm run build # The build command of your project
+        
+      - name: Copy package.json
+        uses: canastro/copy-file-action@master
+        with:
+          source: "package.json"
+          target: "build/package.json"
     
       - name: Push
         uses: s0/git-publish-subdir-action@develop
