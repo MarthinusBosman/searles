@@ -13,6 +13,7 @@
 			appId: '1:1094795670040:web:eb66a4c016e180f9ee496d',
 			measurementId: 'G-L7SLFLEG0P'
 		};
+
 		initializeApp(firebaseConfig);
 	});
 </script>
