@@ -5,6 +5,10 @@
 	let showOpening = openDate > currDate;
 </script>
 
+<svelte:head>
+	<title>Searles Garagiste</title>
+</svelte:head>
+
 <div class="flex flex-col items-center justify-center h-screen bg-logoBlue">
 	<img class="w-4/6 max-w-sm" src="/images/logo.png" alt="Searles Logo" />
 	{#if showOpening}
