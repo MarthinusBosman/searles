@@ -17,7 +17,16 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build # The build command of your project
+        run: npm run build
+
+      - name: Go to functions folder
+        run: cd functions
+
+      - name: Install functions dependencies
+        run: npm install
+
+      - name: Go back to root folder
+        run: cd ..
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
