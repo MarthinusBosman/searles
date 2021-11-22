@@ -19,23 +19,9 @@ jobs:
       - name: Build
         run: npm run build # The build command of your project
 
-      - name: Copy package.json
-        uses: canastro/copy-file-action@master
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
         with:
-          source: 'package.json'
-          target: 'build/package.json'
-
-      - name: Copy server.js
-        uses: canastro/copy-file-action@master
-        with:
-          source: 'server.js'
-          target: 'build/server.js'
-
-      - name: Push
-        uses: s0/git-publish-subdir-action@develop
+          args: deploy
         env:
-          REPO: self
-          BRANCH: build # The branch name where you want to push the assets
-          FOLDER: build # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: 'Build: ({sha}) {msg}' # The commit message
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

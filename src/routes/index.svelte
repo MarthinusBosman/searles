@@ -2,17 +2,17 @@
 	let openDate = new Date('November 19, 2021 09:00:00');
 	let currDate = new Date();
 
-	let showOpening = currDate > openDate;
+	let showOpening = openDate > currDate;
 </script>
 
 <div class="flex flex-col items-center justify-center h-screen bg-logoBlue">
-	<img class="w-4/5 max-w-md" src="/images/logo.png" alt="Searles Logo" />
+	<img class="w-4/6 max-w-sm" src="/images/logo.png" alt="Searles Logo" />
 	{#if showOpening}
 		<h1 class="font-serif text-4xl text-center">Opening this Saturday!</h1>
 	{:else}
 		<h1 class="font-serif text-4xl text-center">Open now!</h1>
 	{/if}
-	<div class="font-serif text-3xl text-center pt-5 align-middle leading-normal">
+	<div class="font-serif text-2xl text-center pt-5 align-middle leading-normal">
 		<button
 			class="bg-logoBlue-dark hover:bg-logoBlue-darkest text-white font-bold py-2 px-4 rounded align-middle"
 			on:click={() => {
@@ -26,13 +26,14 @@
 		<button
 			class="bg-logoBlue-dark hover:bg-logoBlue-darkest text-white font-bold py-2 px-4 rounded align-middle"
 			on:click={() => {
-				window.open('tel:+27714936387', '_blank');
+				window.open('tel:+27764859343', '_blank');
 			}}
 		>
 			<i class="mi mi-call"><span class="u-sr-only">Call</span></i>
-			call us
+			Call us
 		</button>
 	</div>
+	<h3 class="font-serif text-lg pt-5 text-center">Website coming soon...</h3>
 </div>
 
 <style>
