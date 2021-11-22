@@ -11,7 +11,7 @@
 		"predeploy": ["npm run build"]
 	},
 	"functions": {
-		"predeploy": ["npm run build"],
+		"predeploy": ["npm install", "npm run build"],
 		"source": "functions"
 	}
 }
