@@ -10,10 +10,16 @@ module.exports = {
 				light: '#56c3cc',
 				lightest: '#66e8f2'
 			},
-			logoYellow: '#c5b343'
+			logoYellow: '#c5b343',
+			white: '#fff',
+			facebookBlue: {
+				dark: '#25385f',
+				DEFAULT: '#395693'
+			}
 		},
 		fontFamily: {
-			serif: ['Merriweather', 'ui-serif', 'Georgia']
+			serif: ['Merriweather', 'ui-serif', 'Georgia'],
+			sans_serif: ['Tahoma', 'ui-serif']
 		}
 	}
 };
