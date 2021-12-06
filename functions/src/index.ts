@@ -8,11 +8,11 @@ import * as functions from 'firebase-functions';
 //   response.send("Hello from Firebase!");
 // });
 
-let searlesServer;
+let searlesServer: any;
 exports.searles = functions.region('us-central1').https.onRequest(async (request, response) => {
 	if (!searlesServer) {
 		functions.logger.info('Initialising SvelteKit SSR entry');
-		searlesServer = require('../lib/searles/index').default;
+		searlesServer = require('./searles/index').default;
 		functions.logger.info('SvelteKit SSR entry initialised!');
 	}
 	functions.logger.info('Requested resource: ' + request.originalUrl);

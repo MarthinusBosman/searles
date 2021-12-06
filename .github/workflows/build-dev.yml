@@ -1,9 +1,9 @@
-name: Generate a build and deploy to firebase
+name: Generate a build and deploy to firebase beta channel
 
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   build:
@@ -32,15 +32,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: copy index.js
-        uses: canastro/copy-file-action@master
-        with:
-          source: 'functions/lib/searles/index.js'
-          target: 'functions/lib/index.js'
-
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy
+          args: channel:hosting:deploy beta
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
