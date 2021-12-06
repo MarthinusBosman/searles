@@ -1,5 +1,6 @@
 /* eslint-disable */
-import * as functions from 'firebase-functions';
+// @ts-ignore
+let functions = require('firebase-functions');
 
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
@@ -10,10 +11,12 @@ import * as functions from 'firebase-functions';
 // });
 
 let searlesServer: any;
+
+// @ts-ignore
 exports.searles = functions.region('us-central1').https.onRequest(async (request, response) => {
 	if (!searlesServer) {
-		functions.logger.info('Initialising SvelteKit SSR entry');
-		searlesServer = require('./searles/index').default;
+		functions.logger.info('Initialising SvelteKit SSR entry'); // @ts-ignore
+		searlesServer = require('./searles/index').default; 
 		functions.logger.info('SvelteKit SSR entry initialised!');
 	}
 	functions.logger.info('Requested resource: ' + request.originalUrl);
