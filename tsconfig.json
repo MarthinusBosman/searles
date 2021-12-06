@@ -18,6 +18,8 @@
 		"sourceMap": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
+		"strict": true,
+		"strictBindCallApply": true,
 		"forceConsistentCasingInFileNames": true,
 		"baseUrl": ".",
 		"allowJs": true,

@@ -15,7 +15,13 @@ module.exports = {
 			facebookBlue: {
 				dark: '#25385f',
 				DEFAULT: '#395693'
-			}
+			},
+			yellow: {
+				dark: '#C7AA3F',
+				DEFAULT: '#EDCA4B'
+			},
+			blue: '#296668',
+			background: '#1A1A1A'
 		},
 		fontFamily: {
 			serif: ['Merriweather', 'ui-serif', 'Georgia'],
