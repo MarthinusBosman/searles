@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as functions from 'firebase-functions';
 
 // // Start writing Firebase Functions
